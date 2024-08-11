@@ -4,6 +4,37 @@ body {
     margin: 0;
     padding: 20px;
 }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+}
+
+/* Navbar Styles */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: black;
+    padding: 0 20px;
+}
+
+#logo {
+    color: #f08804;
+    font-size: 25px;
+}
+
+#navbar a {
+    color: #f08804;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    color: yellow;
+}
 
 .container {
     max-width: 800px;

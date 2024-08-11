@@ -21,14 +21,14 @@ body {
     font-size: 25px;
 }
 
-nav a {
-    color: white;
+#navbar a {
+    color: #f08804;
     margin-right: 20px;
     text-decoration: none;
 }
 
-nav a:hover {
-    color: #f08804;
+#navbar a:hover {
+    color: yellow;
 }
 
 button {
