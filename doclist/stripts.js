@@ -50,3 +50,77 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const cityListItems = document.querySelectorAll('.city-list li');
+    const departmentListItems = document.querySelectorAll('.department-list li');
+    const doctorCards = document.querySelectorAll('.doctor-card');
+
+    cityListItems.forEach(item => {
+        item.addEventListener('click', function() {
+            document.getElementById('selected-city').textContent = item.textContent;
+            departmentListItems.forEach(department => {
+                if (department.classList.contains(item.dataset.city)) {
+                    department.style.display = 'inline-block';
+                } else {
+                    department.style.display = 'none';
+                }
+            });
+            doctorCards.forEach(card => {
+                card.style.display = 'none';
+            });
+            document.getElementById('selected-department').textContent = 'Select a department';
+        });
+    });
+
+    departmentListItems.forEach(item => {
+        item.addEventListener('click', function() {
+            document.getElementById('selected-department').textContent = item.textContent;
+            doctorCards.forEach(card => {
+                if (card.classList.contains(item.textContent.toLowerCase().replace(' ', '-'))) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const bookButtons = document.querySelectorAll(".book-button");
+
+    bookButtons.forEach(button => {
+        button.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+
+            const doctorName = this.getAttribute("href").split("=")[1]; // Extract the doctor's name from the URL
+            window.location.href = `/login/login.html?doctor=${doctorName}`; // Redirect to the login page with the doctor's name as a query parameter
+        });
+    });
+});

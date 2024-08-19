@@ -1,4 +1,4 @@
-body {
+/*body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
@@ -11,7 +11,7 @@ body {
     background: #f8f9fa;
 }
 
-/* Navbar Styles */
+/* Navbar Styles 
 #navbar {
     display: flex;
     justify-content: space-between;
@@ -99,4 +99,90 @@ h1, h2 {
 
 .doctor-card.show {
     display: block;
+}*/
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.city-list, .department-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.city-list li, .department-list li {
+    padding: 10px;
+    margin: 5px 0;
+    background: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    display: inline-block;
+    width: 45%;
+    text-align: center;
+}
+
+.city-list li:hover, .department-list li:hover {
+    background: #0056b3;
+}
+
+.doctor-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.doctor-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.doctor-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.book-button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f08804;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.book-button:hover {
+    background-color: #d97804;
 }
