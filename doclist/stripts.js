@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
             event.preventDefault(); // Prevent the default link behavior
 
             const doctorName = this.getAttribute("href").split("=")[1]; // Extract the doctor's name from the URL
-            window.location.href = `/login/login.html?doctor=${doctorName}`; // Redirect to the login page with the doctor's name as a query parameter
+            window.location.href = `../login/login.html?doctor=${doctorName}`; // Redirect to the login page with the doctor's name as a query parameter
         });
     });
 });
